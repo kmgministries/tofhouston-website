@@ -66,12 +66,12 @@
     .hero h1 span{display:block;color:var(--gold-light);font-style:italic;font-weight:500}
     .hero-lead{max-width:660px;margin:30px 0 34px;color:#e8dcd4;font-size:1.12rem;line-height:1.8}
     .hero-actions{display:flex;flex-wrap:wrap;gap:13px}
-    .hero-art{position:relative;display:grid;place-items:center;align-self:stretch}
+    .hero-art{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;align-self:stretch}
     .hero-art::before,.hero-art::after{content:"";position:absolute;border:1px solid #e6b85e55;border-radius:50%}
     .hero-art::before{width:min(42vw,560px);aspect-ratio:1}
     .hero-art::after{width:min(35vw,465px);aspect-ratio:1}
     .hero-art img{position:relative;z-index:1;width:min(92%,500px);box-shadow:0 40px 100px #0009;filter:saturate(.95) contrast(1.04)}
-    .hero-note{position:absolute;z-index:2;right:-18px;bottom:68px;width:240px;padding:20px 22px;background:#fffaf1;color:var(--ink);box-shadow:0 18px 50px #0007}
+    .hero-note{position:relative;z-index:2;right:auto;bottom:auto;width:min(92%,500px);margin-top:16px;padding:18px 22px;background:#fffaf1;color:var(--ink);box-shadow:0 18px 50px #0007}
     .hero-note b{display:block;font:700 1.35rem "Cormorant Garamond",Georgia,serif}
     .hero-note span{display:block;margin-top:4px;color:var(--ruby);font-size:.73rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
     .commitment-bar{border-bottom:1px solid var(--line);background:var(--paper)}
@@ -171,12 +171,12 @@
       .header-inner{min-height:88px;grid-template-columns:1fr auto}.brand img{width:62px;height:62px}.brand-copy b{font-size:1.3rem}.desktop-nav{display:none}.menu{display:block;padding:14px 0}
       .mobile-panel{position:absolute;left:0;right:0;top:88px;padding:10px 20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 40px #2c17131c}
       .mobile-panel.open{display:grid}.mobile-panel a{padding:15px 4px;border-bottom:1px solid var(--line);font-weight:700}.mobile-panel a:last-child{margin-top:14px;border:0;background:var(--wine);color:#fff;text-align:center}
-      .hero-inner{min-height:auto;grid-template-columns:1fr;padding-block:80px}.hero h1{font-size:clamp(3.8rem,12vw,6rem)}.hero-art{min-height:560px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}.hero-note{right:3%;bottom:25px}
+      .hero-inner{min-height:auto;grid-template-columns:1fr;padding-block:80px}.hero h1{font-size:clamp(3.8rem,12vw,6rem)}.hero-art{min-height:560px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}.hero-note{right:auto;bottom:auto}
       .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
     }
     @media(max-width:560px){
       body{font-size:16px}.wrap{width:calc(100% - 36px)}.topline-inner{min-height:38px;font-size:.68rem}.brand-copy span{font-size:.6rem}
-      .hero-inner{padding-block:62px}.hero h1{font-size:3.55rem}.hero-lead{font-size:1rem}.hero-art{min-height:430px}.hero-art img{width:90%}.hero-note{position:relative;right:auto;bottom:auto;margin:-30px 0 0 auto}
+      .hero-inner{padding-block:62px}.hero h1{font-size:3.55rem}.hero-lead{font-size:1rem}.hero-art{min-height:430px}.hero-art img{width:90%}.hero-note{position:relative;right:auto;bottom:auto;margin:16px auto 0}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
       .intro,.pillars,.mission,.stand,.experience{padding-block:88px}.intro-copy{grid-template-columns:1fr}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:290px;padding:30px}.mission-art::before{inset:16px -12px -16px 12px}.step{grid-template-columns:58px 1fr}
       .prayer-inner{min-height:auto;padding-block:82px}.prayer h2{font-size:3.65rem}.prayer-actions,.button{width:100%}
