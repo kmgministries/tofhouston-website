@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#120708">
-  <meta name="description" content="Stand Ministry and Temple of Faith Houston — restoring, equipping, empowering, and transforming lives through Jesus Christ.">
-  <title>Stand Ministry | Faith • People • Progress</title>
+  <meta name="description" content="Temple of Faith Houston — home of Stand Ministry, restoring, equipping, empowering, and transforming lives through Jesus Christ.">
+  <title>Temple of Faith Houston | Home of Stand Ministry</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     .site-header{position:sticky;z-index:100;top:0;background:#fffaf1f2;border-bottom:1px solid #2d1d171c;backdrop-filter:blur(18px)}
     .header-inner{min-height:104px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:48px}
     .brand{display:flex;align-items:center;gap:15px;min-width:max-content}
-    .brand img{width:76px;height:76px;object-fit:cover;object-position:center;border:1px solid #b98c3b55;box-shadow:0 8px 22px #2b0b0c1c}
+    .brand img{width:76px;height:76px;object-fit:cover;object-position:50% 6%;border:1px solid #b98c3b55;box-shadow:0 8px 22px #2b0b0c1c}
     .brand-copy{display:grid;line-height:1}
     .brand-copy b{font:700 1.55rem/1.05 "Cormorant Garamond",Georgia,serif}
     .brand-copy span{margin-top:8px;color:var(--ruby);font-size:.68rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
@@ -112,6 +112,16 @@
     .mission-copy>p:not(.eyebrow){margin:28px 0;color:var(--muted);font-size:1.08rem;line-height:1.85}
     .mission-quote{margin:38px 0;padding:28px 0 28px 32px;border-left:3px solid var(--gold);font:600 1.45rem/1.55 "Cormorant Garamond",Georgia,serif}
 
+    .stand{padding:110px 0;background:var(--wine-deep);color:#fff}
+    .stand-inner{display:grid;grid-template-columns:minmax(240px,.55fr) minmax(0,1.45fr);align-items:center;gap:clamp(48px,8vw,120px)}
+    .stand-mark{position:relative;max-width:380px;margin:auto}
+    .stand-mark::before{content:"";position:absolute;inset:-18px;border:1px solid #e6b85e55}
+    .stand-mark img{position:relative;width:100%;box-shadow:0 30px 75px #0008}
+    .stand-copy h2{max-width:820px;margin:0;font-size:clamp(3.2rem,5vw,5.2rem);font-weight:600;line-height:1;letter-spacing:-.03em}
+    .stand-copy h2 em{color:var(--gold-light);font-style:italic}
+    .stand-copy>p:not(.eyebrow){max-width:780px;margin:28px 0;color:#dfd0ca;font-size:1.06rem;line-height:1.85}
+    .stand-label{display:inline-flex;padding:10px 14px;border:1px solid #e6b85e66;color:var(--gold-light);font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+
     .experience{padding:128px 0;background:var(--ivory)}
     .experience-layout{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(60px,9vw,145px)}
     .experience-intro{position:sticky;top:145px;align-self:start}
@@ -162,13 +172,13 @@
       .mobile-panel{position:absolute;left:0;right:0;top:88px;padding:10px 20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 40px #2c17131c}
       .mobile-panel.open{display:grid}.mobile-panel a{padding:15px 4px;border-bottom:1px solid var(--line);font-weight:700}.mobile-panel a:last-child{margin-top:14px;border:0;background:var(--wine);color:#fff;text-align:center}
       .hero-inner{min-height:auto;grid-template-columns:1fr;padding-block:80px}.hero h1{font-size:clamp(3.8rem,12vw,6rem)}.hero-art{min-height:560px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}.hero-note{right:3%;bottom:25px}
-      .intro-grid,.mission-grid,.experience-layout,.prayer-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
+      .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
     }
     @media(max-width:560px){
       body{font-size:16px}.wrap{width:calc(100% - 36px)}.topline-inner{min-height:38px;font-size:.68rem}.brand-copy span{font-size:.6rem}
       .hero-inner{padding-block:62px}.hero h1{font-size:3.55rem}.hero-lead{font-size:1rem}.hero-art{min-height:430px}.hero-art img{width:90%}.hero-note{position:relative;right:auto;bottom:auto;margin:-30px 0 0 auto}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
-      .intro,.pillars,.mission,.experience{padding-block:88px}.intro-copy{grid-template-columns:1fr}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:290px;padding:30px}.mission-art::before{inset:16px -12px -16px 12px}.step{grid-template-columns:58px 1fr}
+      .intro,.pillars,.mission,.stand,.experience{padding-block:88px}.intro-copy{grid-template-columns:1fr}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:290px;padding:30px}.mission-art::before{inset:16px -12px -16px 12px}.step{grid-template-columns:58px 1fr}
       .prayer-inner{min-height:auto;padding-block:82px}.prayer h2{font-size:3.65rem}.prayer-actions,.button{width:100%}
       .footer-callout-inner{min-height:auto;padding-block:70px}.footer-main{grid-template-columns:1fr;padding-block:52px}.footer-brand{grid-column:auto;flex-direction:column}.footer-brand img{width:165px;height:165px}.footer-main>.footer-col:last-child{grid-column:auto}
     }
@@ -178,39 +188,43 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <div class="topline">
-    <div class="wrap topline-inner"><strong>Faith • People • Progress</strong><div class="topline-links"><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">Email the Ministry</a></div></div>
+    <div class="wrap topline-inner"><strong>Temple of Faith Houston</strong><div class="topline-links"><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">Email the Church</a></div></div>
   </div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#home" aria-label="Stand Ministry home"><img src="stand-ministry-crest.jpeg" alt=""><span class="brand-copy"><b>Stand Ministry</b><span>Results Matter</span></span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a></nav>
+      <a class="brand" href="#home" aria-label="Temple of Faith Houston home"><img src="temple-of-faith-mission.jpeg" alt="Temple of Faith Houston"><span class="brand-copy"><b>Temple of Faith Houston</b><span>Envision • Express • Experience</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a></nav>
       <a class="header-action" href="#contact">Get Connected</a>
       <button class="menu" aria-expanded="false" aria-controls="mobile-panel">Menu ☰</button>
-      <nav class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a><a href="tel:+18329281447">Call the Ministry</a></nav>
+      <nav class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a><a href="tel:+18329281447">Call the Church</a></nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="home">
       <div class="wrap hero-inner">
-        <div class="hero-copy reveal"><p class="eyebrow light">Stand Ministry · Temple of Faith Houston</p><h1>Faith that stands.<span>Lives that move.</span></h1><p class="hero-lead">A ministry centered on the Word of God, Spirit-filled living, and the belief that faith should produce real transformation in real people.</p><div class="hero-actions"><a class="button button-gold" href="#mission">Discover our mission <span>↗</span></a><a class="button button-line" href="#contact">Connect with us <span>→</span></a></div></div>
-        <div class="hero-art reveal"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry crest with crown, cross, shield, and laurel"><div class="hero-note"><b>Faith • People • Progress</b><span>Results matter</span></div></div>
+        <div class="hero-copy reveal"><p class="eyebrow light">Welcome to Temple of Faith Houston</p><h1>Envision it.<span>Experience it.</span></h1><p class="hero-lead">A Christ-centered church where the Word of God is preached, taught, and lived—empowering people to grow in faith and experience the results of a Spirit-filled life.</p><div class="hero-actions"><a class="button button-gold" href="#mission">Discover our mission <span>↗</span></a><a class="button button-line" href="#contact">Connect with our church <span>→</span></a></div></div>
+        <div class="hero-art reveal"><img src="temple-of-faith-mission.jpeg" alt="Temple of Faith Houston mission"><div class="hero-note"><b>Temple of Faith Houston</b><span>Envision it • Express it • Experience it</span></div></div>
       </div>
     </section>
 
-    <div class="commitment-bar" aria-label="Stand Ministry commitments"><div class="wrap commitment-inner"><span><i>01</i> Restore</span><span><i>02</i> Equip</span><span><i>03</i> Empower</span><span><i>04</i> Transform</span></div></div>
+    <div class="commitment-bar" aria-label="Temple of Faith Houston commitments"><div class="wrap commitment-inner"><span><i>01</i> Preach</span><span><i>02</i> Teach</span><span><i>03</i> Evangelize</span><span><i>04</i> Transform</span></div></div>
 
     <section class="intro" id="about">
-      <div class="wrap intro-grid"><div class="intro-index">01 — Who we are</div><div class="reveal"><p class="eyebrow">A ministry of movement</p><h2>Helping people stand in truth and step into <em>purpose.</em></h2><div class="intro-copy"><p class="lead">We believe restored faith creates stronger people, stronger families, and transformed communities.</p><p>Stand Ministry exists to bring biblical truth into everyday life—so people can grow spiritually, live boldly, and experience the difference a Christ-centered life makes.</p></div></div></div>
+      <div class="wrap intro-grid"><div class="intro-index">01 — Our church</div><div class="reveal"><p class="eyebrow">A church grounded in the Word</p><h2>Faith for real life. Truth that brings <em>transformation.</em></h2><div class="intro-copy"><p class="lead">Temple of Faith Houston is a church committed to helping people know God, grow through His Word, and live with spiritual authority.</p><p>Through preaching, teaching, evangelism, prayer, and ministry, we create space for people and families to encounter Jesus Christ and experience the fruit of a Spirit-filled life.</p></div></div></div>
     </section>
 
     <section class="pillars" id="foundation">
-      <div class="wrap"><div class="section-head reveal"><div><p class="eyebrow light">Our foundation</p><h2>Faith becomes visible in how we serve.</h2></div><p>Four commitments shape the way we help people move from where they are toward the life God has called them to live.</p></div><div class="pillar-grid">
-        <article class="pillar reveal"><span class="pillar-number">01 / Renew</span><h3>Restore</h3><p>Helping people rediscover hope, spiritual strength, and the truth of who they are in Christ.</p><span class="pillar-mark">R</span></article>
-        <article class="pillar reveal"><span class="pillar-number">02 / Prepare</span><h3>Equip</h3><p>Building a strong foundation through biblical teaching, truth, and practical spiritual growth.</p><span class="pillar-mark">E</span></article>
-        <article class="pillar reveal"><span class="pillar-number">03 / Strengthen</span><h3>Empower</h3><p>Encouraging people to live boldly, use their gifts, and move forward with God-given purpose.</p><span class="pillar-mark">E</span></article>
-        <article class="pillar reveal"><span class="pillar-number">04 / Change</span><h3>Transform</h3><p>Believing for lasting change in individuals, families, communities, and the world around us.</p><span class="pillar-mark">T</span></article>
+      <div class="wrap"><div class="section-head reveal"><div><p class="eyebrow light">Our foundation</p><h2>Everything begins with God’s Word.</h2></div><p>Our church exists to make biblical truth clear, lived, and visible in the lives of people, families, and communities.</p></div><div class="pillar-grid">
+        <article class="pillar reveal"><span class="pillar-number">01 / Proclaim</span><h3>Preaching</h3><p>Declaring the truth of God’s Word with clarity, conviction, and faith.</p><span class="pillar-mark">P</span></article>
+        <article class="pillar reveal"><span class="pillar-number">02 / Grow</span><h3>Teaching</h3><p>Building strong biblical foundations for everyday decisions and spiritual maturity.</p><span class="pillar-mark">T</span></article>
+        <article class="pillar reveal"><span class="pillar-number">03 / Reach</span><h3>Evangelism</h3><p>Sharing the hope of Jesus Christ and inviting others into a transformed life.</p><span class="pillar-mark">E</span></article>
+        <article class="pillar reveal"><span class="pillar-number">04 / Live</span><h3>Spirit-filled Life</h3><p>Empowering believers to express their faith and experience its results in daily life.</p><span class="pillar-mark">S</span></article>
       </div></div>
+    </section>
+
+    <section class="stand" id="ministries">
+      <div class="wrap stand-inner"><div class="stand-mark reveal"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry crest"></div><div class="stand-copy reveal"><p class="eyebrow light">A ministry of Temple of Faith Houston</p><h2>Meet <em>Stand Ministry.</em></h2><p>Stand Ministry serves through Temple of Faith Houston with a focused commitment to restore, equip, empower, and transform. It is one expression of the church’s mission—not a separate church.</p><span class="stand-label">Faith • People • Progress — Results Matter</span></div></div>
     </section>
 
     <section class="mission" id="mission">
@@ -222,14 +236,14 @@
     </section>
 
     <section class="prayer" id="prayer">
-      <div class="wrap prayer-inner"><div class="reveal"><p class="eyebrow light">Prayer changes things</p><h2>You do not have to carry it alone.</h2><p>Share your prayer request directly with Temple of Faith Houston. The ministry is ready to stand with you in faith.</p></div><div class="prayer-actions reveal"><a class="button button-gold" href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Share a prayer request <span>→</span></a><a class="button button-line" href="tel:+18329281447">Call (832) 928-1447</a></div></div>
+      <div class="wrap prayer-inner"><div class="reveal"><p class="eyebrow light">Prayer changes things</p><h2>You do not have to carry it alone.</h2><p>Share your prayer request with Temple of Faith Houston. Our church is ready to stand with you in faith.</p></div><div class="prayer-actions reveal"><a class="button button-gold" href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Share a prayer request <span>→</span></a><a class="button button-line" href="tel:+18329281447">Call (832) 928-1447</a></div></div>
     </section>
   </main>
 
   <footer class="footer" id="contact">
-    <div class="footer-callout"><div class="wrap footer-callout-inner"><h2>Stand in faith.<br><em>Live with purpose.</em></h2><a class="footer-link" href="mailto:templeoffaithhouston@yahoo.com">Begin a conversation →</a></div></div>
-    <div class="wrap footer-main"><div class="footer-brand"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry"><div class="footer-brand-copy"><h3>Stand Ministry</h3><p>Faith • People • Progress<br>Results Matter</p></div></div><div class="footer-col"><h3>Explore</h3><a href="#about">About</a><a href="#mission">Our Mission</a><a href="#foundation">Our Foundation</a><a href="#prayer">Prayer</a></div><div class="footer-col"><h3>Take part</h3><a href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Request Prayer</a><a href="#contact">Connect With Us</a><a href="tel:+18329281447">Call the Ministry</a></div><div class="footer-col"><h3>Connect</h3><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">templeoffaithhouston@yahoo.com</a><p>Temple of Faith Houston</p></div></div>
-    <div class="footer-bottom"><div class="wrap footer-bottom-inner"><span>© <span id="year"></span> Stand Ministry. All Rights Reserved.</span><span>Temple of Faith Houston</span><span>Faith • People • Progress</span></div></div>
+    <div class="footer-callout"><div class="wrap footer-callout-inner"><h2>Grow in faith.<br><em>Stand with purpose.</em></h2><a class="footer-link" href="mailto:templeoffaithhouston@yahoo.com">Begin a conversation →</a></div></div>
+    <div class="wrap footer-main"><div class="footer-brand"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry crest"><div class="footer-brand-copy"><h3>Temple of Faith Houston</h3><p>Home of Stand Ministry<br>Faith • People • Progress</p></div></div><div class="footer-col"><h3>Explore</h3><a href="#about">About</a><a href="#mission">Our Mission</a><a href="#foundation">Our Foundation</a><a href="#prayer">Prayer</a></div><div class="footer-col"><h3>Take part</h3><a href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Request Prayer</a><a href="#contact">Connect With Us</a><a href="tel:+18329281447">Call the Church</a></div><div class="footer-col"><h3>Connect</h3><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">templeoffaithhouston@yahoo.com</a><p>Temple of Faith Houston</p><p>Stand Ministry is a ministry of Temple of Faith Houston.</p></div></div>
+    <div class="footer-bottom"><div class="wrap footer-bottom-inner"><span>© <span id="year"></span> Temple of Faith Houston. All Rights Reserved.</span><span>Home of Stand Ministry</span><span>Faith • People • Progress</span></div></div>
   </footer>
 
   <script>
