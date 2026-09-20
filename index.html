@@ -70,10 +70,7 @@
     .hero-art::before,.hero-art::after{content:"";position:absolute;border:1px solid #e6b85e55;border-radius:50%}
     .hero-art::before{width:min(42vw,560px);aspect-ratio:1}
     .hero-art::after{width:min(35vw,465px);aspect-ratio:1}
-    .hero-art img{position:relative;z-index:1;width:min(92%,500px);box-shadow:0 40px 100px #0009;filter:saturate(.95) contrast(1.04)}
-    .hero-note{position:relative;z-index:2;right:auto;bottom:auto;width:min(92%,500px);margin-top:16px;padding:18px 22px;background:#fffaf1;color:var(--ink);box-shadow:0 18px 50px #0007}
-    .hero-note b{display:block;font:700 1.35rem "Cormorant Garamond",Georgia,serif}
-    .hero-note span{display:block;margin-top:4px;color:var(--ruby);font-size:.73rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .hero-art img{position:relative;z-index:1;width:min(92%,445px);aspect-ratio:446/640;object-fit:cover;object-position:left center;box-shadow:0 40px 100px #0009;filter:saturate(.95) contrast(1.04)}
     .commitment-bar{border-bottom:1px solid var(--line);background:var(--paper)}
     .commitment-inner{min-height:88px;display:grid;grid-template-columns:repeat(4,1fr)}
     .commitment-inner span{display:flex;align-items:center;justify-content:center;gap:13px;border-right:1px solid var(--line);font:700 1.08rem "Cormorant Garamond",Georgia,serif;letter-spacing:.04em}
@@ -106,7 +103,7 @@
     .mission-grid{display:grid;grid-template-columns:minmax(320px,.75fr) minmax(0,1.25fr);gap:clamp(60px,9vw,140px);align-items:center}
     .mission-art{position:relative;margin:0}
     .mission-art::before{content:"";position:absolute;inset:28px -28px -28px 28px;border:1px solid var(--gold)}
-    .mission-art img{position:relative;width:100%;max-height:690px;object-fit:cover;box-shadow:0 30px 70px #32120d22}
+    .mission-art img{position:relative;width:100%;max-height:690px;aspect-ratio:446/640;object-fit:cover;object-position:left center;box-shadow:0 30px 70px #32120d22}
     .mission-copy h2{margin:0;font-size:clamp(3.3rem,5vw,5.35rem);font-weight:600;line-height:1;letter-spacing:-.035em}
     .mission-copy h2 em{color:var(--ruby);font-style:italic}
     .mission-copy>p:not(.eyebrow){margin:28px 0;color:var(--muted);font-size:1.08rem;line-height:1.85}
@@ -171,12 +168,12 @@
       .header-inner{min-height:88px;grid-template-columns:1fr auto}.brand img{width:62px;height:62px}.brand-copy b{font-size:1.3rem}.desktop-nav{display:none}.menu{display:block;padding:14px 0}
       .mobile-panel{position:absolute;left:0;right:0;top:88px;padding:10px 20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 40px #2c17131c}
       .mobile-panel.open{display:grid}.mobile-panel a{padding:15px 4px;border-bottom:1px solid var(--line);font-weight:700}.mobile-panel a:last-child{margin-top:14px;border:0;background:var(--wine);color:#fff;text-align:center}
-      .hero-inner{min-height:auto;grid-template-columns:1fr;padding-block:80px}.hero h1{font-size:clamp(3.8rem,12vw,6rem)}.hero-art{min-height:560px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}.hero-note{right:auto;bottom:auto}
+      .hero-inner{min-height:auto;grid-template-columns:1fr;padding-block:80px}.hero h1{font-size:clamp(3.8rem,12vw,6rem)}.hero-art{min-height:560px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}
       .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
     }
     @media(max-width:560px){
       body{font-size:16px}.wrap{width:calc(100% - 36px)}.topline-inner{min-height:38px;font-size:.68rem}.brand-copy span{font-size:.6rem}
-      .hero-inner{padding-block:62px}.hero h1{font-size:3.55rem}.hero-lead{font-size:1rem}.hero-art{min-height:430px}.hero-art img{width:90%}.hero-note{position:relative;right:auto;bottom:auto;margin:16px auto 0}
+      .hero-inner{padding-block:62px}.hero h1{font-size:3.55rem}.hero-lead{font-size:1rem}.hero-art{min-height:430px}.hero-art img{width:90%}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
       .intro,.pillars,.mission,.stand,.experience{padding-block:88px}.intro-copy{grid-template-columns:1fr}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:290px;padding:30px}.mission-art::before{inset:16px -12px -16px 12px}.step{grid-template-columns:58px 1fr}
       .prayer-inner{min-height:auto;padding-block:82px}.prayer h2{font-size:3.65rem}.prayer-actions,.button{width:100%}
@@ -204,7 +201,7 @@
     <section class="hero" id="home">
       <div class="wrap hero-inner">
         <div class="hero-copy reveal"><p class="eyebrow light">Welcome to Temple of Faith Houston</p><h1>Envision it.<span>Express it.<br>Experience it.</span></h1><p class="hero-lead">A Christ-centered church where the Word of God is preached, taught, and lived—empowering people to grow in faith and experience the results of a Spirit-filled life.</p><div class="hero-actions"><a class="button button-gold" href="#mission">Discover our mission <span>↗</span></a><a class="button button-line" href="#contact">Connect with our church <span>→</span></a></div></div>
-        <div class="hero-art reveal"><img src="temple-of-faith-mission.jpeg" alt="Temple of Faith Houston mission"><div class="hero-note"><b>Temple of Faith Houston</b><span>Envision it • Express it • Experience it</span></div></div>
+        <div class="hero-art reveal"><img src="temple-of-faith-mission.jpeg" alt="Temple of Faith Houston mission"></div>
       </div>
     </section>
 
