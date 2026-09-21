@@ -45,7 +45,7 @@
     .site-header{position:sticky;z-index:100;top:0;background:#fffaf1f2;border-bottom:1px solid #2d1d171c;backdrop-filter:blur(18px)}
     .header-inner{min-height:104px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:48px}
     .brand{display:flex;align-items:center;gap:15px;min-width:max-content}
-    .brand img{width:76px;height:76px;object-fit:cover;object-position:50% 6%;border:1px solid #b98c3b55;box-shadow:0 8px 22px #2b0b0c1c}
+    .brand img{width:82px;height:82px;object-fit:contain;object-position:center;border:0;filter:drop-shadow(0 8px 12px #2b0b0c2b)}
     .brand-copy{display:grid;line-height:1}
     .brand-copy b{font:700 1.38rem/1.2 "Libre Baskerville",Georgia,serif}
     .brand-copy span{margin-top:8px;color:var(--ruby);font-size:.76rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
@@ -70,7 +70,7 @@
     .hero-art::before,.hero-art::after{content:"";position:absolute;border:1px solid #e6b85e55;border-radius:50%}
     .hero-art::before{width:min(42vw,560px);aspect-ratio:1}
     .hero-art::after{width:min(35vw,465px);aspect-ratio:1}
-    .hero-art img{position:relative;z-index:1;width:min(92%,500px);aspect-ratio:1;object-fit:cover;object-position:center;box-shadow:0 40px 100px #0009;filter:saturate(.98) contrast(1.04)}
+    .hero-art img{position:relative;z-index:1;width:min(100%,560px);height:auto;object-fit:contain;filter:drop-shadow(0 35px 42px #0009) saturate(.98) contrast(1.04)}
     .commitment-bar{border-bottom:1px solid var(--line);background:var(--paper)}
     .commitment-inner{min-height:88px;display:grid;grid-template-columns:repeat(4,1fr)}
     .commitment-inner span{display:flex;align-items:center;justify-content:center;gap:13px;border-right:1px solid var(--line);font:700 1.05rem "Libre Baskerville",Georgia,serif;letter-spacing:.02em}
@@ -189,7 +189,7 @@
   </div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#home" aria-label="Temple of Faith Houston home"><img src="temple-of-faith-logo.jpeg" alt="Temple of Faith Houston logo"><span class="brand-copy"><b>Temple of Faith Houston</b><span>Envision • Express • Experience</span></span></a>
+      <a class="brand" href="#home" aria-label="Temple of Faith Houston home"><img src="temple-of-faith-logo-transparent.png" alt="Temple of Faith Houston logo"><span class="brand-copy"><b>Temple of Faith Houston</b><span>Envision • Express • Experience</span></span></a>
       <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a></nav>
       <a class="header-action" href="#contact">Get Connected</a>
       <button class="menu" aria-expanded="false" aria-controls="mobile-panel">Menu ☰</button>
@@ -201,7 +201,7 @@
     <section class="hero" id="home">
       <div class="wrap hero-inner">
         <div class="hero-copy reveal"><p class="eyebrow light">Welcome to Temple of Faith Houston</p><h1>Envision it.<span>Express it.<br>Experience it.</span></h1><p class="hero-lead">A Christ-centered church where the Word of God is preached, taught, and lived—empowering people to grow in faith and experience the results of a Spirit-filled life.</p><div class="hero-actions"><a class="button button-gold" href="#mission">Discover our mission <span>↗</span></a><a class="button button-line" href="#contact">Connect with our church <span>→</span></a></div></div>
-        <div class="hero-art reveal"><img src="temple-of-faith-logo.jpeg" alt="Temple of Faith Houston logo"></div>
+        <div class="hero-art reveal"><img src="temple-of-faith-logo-transparent.png" alt="Temple of Faith Houston logo"></div>
       </div>
     </section>
 
