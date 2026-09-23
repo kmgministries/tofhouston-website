@@ -137,6 +137,18 @@
     .prayer p:not(.eyebrow){max-width:710px;color:#f3e6e1;font-size:1.14rem;line-height:1.8}
     .prayer-actions{display:grid;gap:14px}
 
+    .give{padding:110px 0;background:var(--paper)}
+    .give-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);align-items:center;gap:clamp(50px,8vw,110px)}
+    .give-copy h2{margin:0;font-size:clamp(3.2rem,5vw,5.2rem);font-weight:600;line-height:1;letter-spacing:-.03em}
+    .give-copy h2 em{color:var(--ruby);font-style:normal}
+    .give-copy>p:not(.eyebrow){max-width:720px;margin:28px 0 0;color:#514741;font-size:1.1rem;line-height:1.85}
+    .give-card{padding:48px;background:var(--wine-deep);color:#fff;box-shadow:0 28px 70px #32120d26}
+    .give-card h3{margin:0 0 14px;font-size:2rem;line-height:1.2}
+    .give-card p{margin:0 0 28px;color:#eadbd5;font-size:1rem;line-height:1.7}
+    .give-card .tithely-give-button{width:100%!important;min-height:60px!important;padding:15px 30px!important;border-radius:0!important;background:var(--gold)!important;color:#221406!important;font-family:Manrope,Arial,sans-serif!important;font-size:.92rem!important;font-weight:800!important;letter-spacing:.08em!important;text-transform:uppercase!important;box-shadow:none!important;transition:transform .25s,background .25s!important}
+    .give-card .tithely-give-button:hover{transform:translateY(-3px);background:var(--gold-light)!important}
+    .give-note{display:block;margin-top:16px;color:#cebfb7;font-size:.78rem;line-height:1.5;text-align:center}
+
     .footer{background:#090606;color:#eee1d4}
     .footer-callout{border-bottom:1px solid #ffffff1e}
     .footer-callout-inner{min-height:270px;display:flex;align-items:center;justify-content:space-between;gap:60px;padding-block:54px}
@@ -169,7 +181,7 @@
       .mobile-panel{position:absolute;left:0;right:0;top:100%;padding:10px 20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 40px #2c17131c}
       .mobile-panel.open{display:grid}.mobile-panel a{padding:15px 4px;border-bottom:1px solid var(--line);font-weight:700}.mobile-panel a:last-child{margin-top:14px;border:0;background:var(--wine);color:#fff;text-align:center}
       .hero-inner{min-height:auto;grid-template-columns:minmax(0,1fr);padding-block:74px}.hero-copy,.hero-art{min-width:0}.hero h1{max-width:100%;font-size:clamp(3.15rem,11vw,4.75rem);line-height:.96;letter-spacing:-.04em}.hero-art{min-height:500px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}
-      .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
+      .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner,.give-inner{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
     }
     @media(max-width:560px){
       body{font-size:16px}.wrap{width:calc(100% - 32px)}.topline-inner{min-height:38px;font-size:.69rem;letter-spacing:.03em}.topline strong{letter-spacing:.06em}
@@ -178,8 +190,8 @@
       .hero-inner{padding-block:54px;gap:38px}.hero h1{font-size:clamp(2.72rem,11.8vw,3.35rem);line-height:1.02;letter-spacing:-.045em}.hero h1 span{margin-top:4px}.hero-lead{margin:25px 0 28px;font-size:1rem;line-height:1.7}.hero-art{min-height:330px}.hero-art img{width:94%;max-width:430px}.hero-art::before{width:min(86vw,400px)}.hero-art::after{width:min(70vw,330px)}
       .hero-actions{gap:10px}.button{min-height:56px;padding-inline:18px;font-size:.78rem;gap:15px}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
-      .intro,.pillars,.mission,.stand,.experience{padding-block:78px}.intro h2,.section-head h2,.mission-copy h2,.stand-copy h2,.experience h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08;letter-spacing:-.035em}.intro-copy{grid-template-columns:1fr;gap:24px;margin-top:32px}.intro-copy .lead{font-size:1.18rem}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:270px;padding:28px}.pillar h3{margin-top:42px;font-size:2rem}.mission-art::before{inset:14px -8px -14px 8px}.mission-quote{margin-block:28px;padding:20px 0 20px 20px;font-size:1.08rem}.stand-label{display:block;font-size:.65rem;line-height:1.7}.step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:28px}.step h3{font-size:1.65rem}
-      .prayer-inner{min-height:auto;padding-block:76px}.prayer h2{font-size:clamp(2.65rem,11vw,3.45rem);line-height:1.05}.prayer-actions,.button{width:100%}
+      .intro,.pillars,.mission,.stand,.experience,.give{padding-block:78px}.intro h2,.section-head h2,.mission-copy h2,.stand-copy h2,.experience h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08;letter-spacing:-.035em}.intro-copy{grid-template-columns:1fr;gap:24px;margin-top:32px}.intro-copy .lead{font-size:1.18rem}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:270px;padding:28px}.pillar h3{margin-top:42px;font-size:2rem}.mission-art::before{inset:14px -8px -14px 8px}.mission-quote{margin-block:28px;padding:20px 0 20px 20px;font-size:1.08rem}.stand-label{display:block;font-size:.65rem;line-height:1.7}.step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:28px}.step h3{font-size:1.65rem}
+      .prayer-inner{min-height:auto;padding-block:76px}.prayer h2{font-size:clamp(2.65rem,11vw,3.45rem);line-height:1.05}.prayer-actions,.button{width:100%}.give-card{padding:32px 24px}.give-copy h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08}
       .footer-callout-inner{min-height:auto;padding-block:62px;gap:34px}.footer-callout h2{font-size:clamp(2.35rem,10vw,3rem);line-height:1.08}.footer-main{grid-template-columns:1fr;padding-block:48px}.footer-brand{grid-column:auto;flex-direction:column}.footer-brand img{width:150px;height:150px}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{font-size:.78rem;gap:12px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button{transition:none}}
@@ -193,10 +205,10 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#home" aria-label="Temple of Faith Houston home"><img src="temple-of-faith-logo-transparent.png" alt="Temple of Faith Houston logo"><span class="brand-copy"><b>Temple of Faith Houston</b><span>Envision • Express • Experience</span></span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a></nav>
-      <a class="header-action" href="#contact">Get Connected</a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#give">Donate Now</a><a href="#contact">Contact</a></nav>
+      <a class="header-action" href="#give">Donate Now</a>
       <button class="menu" aria-expanded="false" aria-controls="mobile-panel">Menu ☰</button>
-      <nav class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#contact">Contact</a><a href="tel:+18329281447">Call the Church</a></nav>
+      <nav class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#mission">Mission</a><a href="#foundation">Foundation</a><a href="#ministries">Ministries</a><a href="#prayer">Prayer</a><a href="#give">Donate Now</a><a href="#contact">Contact</a><a href="tel:+18329281447">Call the Church</a></nav>
     </div>
   </header>
 
@@ -238,14 +250,19 @@
     <section class="prayer" id="prayer">
       <div class="wrap prayer-inner"><div class="reveal"><p class="eyebrow light">Prayer changes things</p><h2>You do not have to carry it alone.</h2><p>Share your prayer request with Temple of Faith Houston. Our church is ready to stand with you in faith.</p></div><div class="prayer-actions reveal"><a class="button button-gold" href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Share a prayer request <span>→</span></a><a class="button button-line" href="tel:+18329281447">Call (832) 928-1447</a></div></div>
     </section>
+
+    <section class="give" id="give">
+      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><h3>Donate securely online</h3><p>Use our secure Tithely giving form to make your gift today.</p><button class="tithely-give-button" data-form="3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" style="background-color: #00DB72; font-family: inherit; font-weight: bold; font-size: 19px; padding: 15px 70px; border-radius: 4px; cursor: pointer; background-image: none; color: white; text-shadow: none; display: inline-block; float: none; border: none;">Donate Now</button><span class="give-note">Secure giving powered by Tithely.</span></div></div>
+    </section>
   </main>
 
   <footer class="footer" id="contact">
     <div class="footer-callout"><div class="wrap footer-callout-inner"><h2>Grow in faith.<br><em>Stand with purpose.</em></h2><a class="footer-link" href="mailto:templeoffaithhouston@yahoo.com">Begin a conversation →</a></div></div>
-    <div class="wrap footer-main"><div class="footer-brand"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry crest"><div class="footer-brand-copy"><h3>Temple of Faith Houston</h3><p>Home of Stand Ministry<br>Faith • People • Progress</p></div></div><div class="footer-col"><h3>Explore</h3><a href="#about">About</a><a href="#mission">Our Mission</a><a href="#foundation">Our Foundation</a><a href="#prayer">Prayer</a></div><div class="footer-col"><h3>Take part</h3><a href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Request Prayer</a><a href="#contact">Connect With Us</a><a href="tel:+18329281447">Call the Church</a></div><div class="footer-col"><h3>Connect</h3><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">templeoffaithhouston@yahoo.com</a><p>Temple of Faith Houston</p><p>Stand Ministry is a ministry of Temple of Faith Houston.</p></div></div>
+    <div class="wrap footer-main"><div class="footer-brand"><img src="stand-ministry-crest.jpeg" alt="Stand Ministry crest"><div class="footer-brand-copy"><h3>Temple of Faith Houston</h3><p>Home of Stand Ministry<br>Faith • People • Progress</p></div></div><div class="footer-col"><h3>Explore</h3><a href="#about">About</a><a href="#mission">Our Mission</a><a href="#foundation">Our Foundation</a><a href="#prayer">Prayer</a><a href="#give">Donate Now</a></div><div class="footer-col"><h3>Take part</h3><a href="mailto:templeoffaithhouston@yahoo.com?subject=Prayer%20Request">Request Prayer</a><a href="#contact">Connect With Us</a><a href="tel:+18329281447">Call the Church</a></div><div class="footer-col"><h3>Connect</h3><a href="tel:+18329281447">(832) 928-1447</a><a href="mailto:templeoffaithhouston@yahoo.com">templeoffaithhouston@yahoo.com</a><p>Temple of Faith Houston</p><p>Stand Ministry is a ministry of Temple of Faith Houston.</p></div></div>
     <div class="footer-bottom"><div class="wrap footer-bottom-inner"><span>© <span id="year"></span> Temple of Faith Houston. All Rights Reserved.</span><span>Home of Stand Ministry</span><span>Faith • People • Progress</span></div></div>
   </footer>
 
+  <script src="https://static.tithely.com/give/give.js" defer></script>
   <script>
     const menu=document.querySelector('.menu'),panel=document.querySelector('.mobile-panel');
     menu.addEventListener('click',()=>{const open=panel.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close ×':'Menu ☰'});
