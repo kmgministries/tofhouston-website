@@ -145,8 +145,7 @@
     .give-card{padding:48px;background:var(--wine-deep);color:#fff;box-shadow:0 28px 70px #32120d26}
     .give-card h3{margin:0 0 14px;font-size:2rem;line-height:1.2}
     .give-card p{margin:0 0 28px;color:#eadbd5;font-size:1rem;line-height:1.7}
-    .give-card .tithely-give-button{width:100%!important;min-height:60px!important;padding:15px 30px!important;border-radius:0!important;background:var(--gold)!important;color:#221406!important;font-family:Manrope,Arial,sans-serif!important;font-size:.92rem!important;font-weight:800!important;letter-spacing:.08em!important;text-transform:uppercase!important;box-shadow:none!important;transition:transform .25s,background .25s!important}
-    .give-card .tithely-give-button:hover{transform:translateY(-3px);background:var(--gold-light)!important}
+    .give-frame{display:block;width:100%;height:800px;border:0;background:#fff}
     .give-note{display:block;margin-top:16px;color:#cebfb7;font-size:.78rem;line-height:1.5;text-align:center}
 
     .footer{background:#090606;color:#eee1d4}
@@ -252,7 +251,7 @@
     </section>
 
     <section class="give" id="give">
-      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><h3>Donate securely online</h3><p>Use our secure Tithely giving form to make your gift today.</p><button class="tithely-give-button" data-form="3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" style="background-color: #00DB72; font-family: inherit; font-weight: bold; font-size: 19px; padding: 15px 70px; border-radius: 4px; cursor: pointer; background-image: none; color: white; text-shadow: none; display: inline-block; float: none; border: none;">Donate Now</button><span class="give-note">Secure giving powered by Tithely.</span></div></div>
+      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><h3>Donate securely online</h3><p>Complete your gift below without leaving the Temple of Faith Houston website.</p><iframe class="give-frame" src="https://give.tithe.ly/?formId=3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" title="Temple of Faith Houston secure online giving form" width="100%" height="800" loading="lazy" allow="payment"></iframe><span class="give-note">Secure giving powered by Tithely.</span></div></div>
     </section>
   </main>
 
@@ -262,7 +261,6 @@
     <div class="footer-bottom"><div class="wrap footer-bottom-inner"><span>© <span id="year"></span> Temple of Faith Houston. All Rights Reserved.</span><span>Home of Stand Ministry</span><span>Faith • People • Progress</span></div></div>
   </footer>
 
-  <script src="https://static.tithely.com/give/give.js" defer></script>
   <script>
     const menu=document.querySelector('.menu'),panel=document.querySelector('.mobile-panel');
     menu.addEventListener('click',()=>{const open=panel.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close ×':'Menu ☰'});
