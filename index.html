@@ -73,9 +73,13 @@
     .hero-art img{position:relative;z-index:1;width:min(100%,560px);height:auto;object-fit:contain;filter:drop-shadow(0 35px 42px #0009) saturate(.98) contrast(1.04)}
 
     .hero-slides{position:absolute;z-index:-3;inset:0;background:#0b0607}
-    .hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transform:scale(1.035);transition:opacity 1s ease,transform 7s ease}
+    .hero-slide{position:absolute;inset:0;overflow:hidden;opacity:0;transform:scale(1.015);transition:opacity 1s ease,transform 7s ease}
+    .hero-slide::before{content:"";position:absolute;inset:-30px;background-image:var(--slide-image);background-position:center;background-size:cover;filter:blur(24px) brightness(.6);transform:scale(1.05)}
+    .hero-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero-slide.is-portrait img{left:auto;right:2%;width:53%;object-fit:contain;object-position:center}
     .hero-slide.active{opacity:1;transform:scale(1)}
-    .hero-slide:nth-child(2),.hero-slide:nth-child(3),.hero-slide:nth-child(5),.hero-slide:nth-child(6),.hero-slide:nth-child(7){object-position:center 28%}
+    .hero-slide.is-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 35%,#0b060722 75%,#0b060744)}
+
     .hero-carousel-ui{position:absolute;z-index:4;right:max(32px,calc((100% - var(--max))/2));bottom:36px;display:flex;align-items:center;gap:18px}
     .hero-carousel-arrows{display:flex;gap:8px}
     .hero-carousel-arrows button{width:46px;height:46px;display:grid;place-items:center;border:1px solid #ffffff66;border-radius:50%;background:#0b060799;color:#fff;font-size:1.25rem;cursor:pointer;backdrop-filter:blur(8px)}
@@ -221,14 +225,14 @@
       .header-inner{min-height:88px;grid-template-columns:minmax(0,1fr) auto;gap:16px}.brand{min-width:0;max-width:100%;overflow:hidden}.brand img{flex:0 0 auto;width:62px;height:62px}.brand-copy{min-width:0}.brand-copy b{font-size:1.15rem;white-space:nowrap}.brand-copy span{white-space:nowrap}.desktop-nav{display:none}.menu{display:block;flex:0 0 auto;padding:14px 0;white-space:nowrap}
       .mobile-panel{position:absolute;left:0;right:0;top:100%;padding:10px 20px 24px;background:var(--ivory);border-bottom:1px solid var(--line);box-shadow:0 24px 40px #2c17131c}
       .mobile-panel.open{display:grid}.mobile-panel a{padding:15px 4px;border-bottom:1px solid var(--line);font-weight:700}.mobile-panel a:last-child{margin-top:14px;border:0;background:var(--wine);color:#fff;text-align:center}
-      .hero-inner{min-height:auto;grid-template-columns:minmax(0,1fr);padding-block:74px}.hero-copy,.hero-art{min-width:0}.hero h1{max-width:100%;font-size:clamp(3.15rem,11vw,4.75rem);line-height:.96;letter-spacing:-.04em}.hero-art{min-height:500px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}
+      .hero-inner{min-height:auto;grid-template-columns:minmax(0,1fr);padding-block:74px}.hero-slide.is-portrait img{right:0;width:65%}.hero-copy,.hero-art{min-width:0}.hero h1{max-width:100%;font-size:clamp(3.15rem,11vw,4.75rem);line-height:.96;letter-spacing:-.04em}.hero-art{min-height:500px}.hero-art::before{width:min(86vw,540px)}.hero-art::after{width:min(70vw,450px)}
       .intro-grid,.mission-grid,.stand-inner,.experience-layout,.prayer-inner,.give-inner,.team-head{grid-template-columns:1fr}.intro-index{display:none}.intro-copy{gap:30px}.section-head{align-items:flex-start;flex-direction:column}.mission-art{max-width:500px;margin:auto}.stand-mark{max-width:360px}.experience-intro{position:static}.prayer-inner{gap:35px}.prayer-actions{display:flex;flex-wrap:wrap}.footer-callout-inner{align-items:flex-start;flex-direction:column}.team-grid{grid-template-columns:1fr 1fr}.footer-main{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{align-items:flex-start;flex-direction:column;justify-content:center;padding-block:22px}
     }
     @media(max-width:560px){
       body{font-size:16px}.wrap{width:calc(100% - 32px)}.topline-inner{min-height:38px;font-size:.69rem;letter-spacing:.03em}.topline strong{letter-spacing:.06em}
       .header-inner{min-height:88px;gap:16px}.brand{gap:0;overflow:visible}.brand img{width:70px;height:70px}.brand-copy{display:none}.menu{padding:14px 0;font-size:1rem}
       .eyebrow{gap:9px;margin-bottom:18px;font-size:.72rem;line-height:1.5;letter-spacing:.1em}.eyebrow::before{flex:0 0 24px;width:24px;margin-top:.7em}
-      .hero-inner{padding-block:64px 108px;gap:38px}.hero h1{font-size:clamp(2.72rem,11.8vw,3.35rem);line-height:1.02;letter-spacing:-.045em}.hero h1 span{margin-top:4px}.hero-lead{margin:25px 0 28px;font-size:1rem;line-height:1.7}.hero-art{min-height:330px}.hero-carousel-ui{left:16px;right:16px;bottom:22px;justify-content:space-between}.hero-carousel-arrows button{width:42px;height:42px}.hero-art img{width:94%;max-width:430px}.hero-art::before{width:min(86vw,400px)}.hero-art::after{width:min(70vw,330px)}
+      .hero-inner{min-height:0;padding-block:52px 330px;gap:0}.hero::before{background:linear-gradient(180deg,#090405fa 0%,#100708ec 43%,#10070860 70%,#090405aa 100%)}.hero::after{opacity:.06}.hero-slide img,.hero-slide.is-portrait img{top:auto;left:0;right:0;bottom:0;width:100%;height:320px;object-fit:contain;object-position:center bottom}.hero-slide.is-portrait::after{display:none}.hero-slide::before{filter:blur(24px) brightness(.45)}.hero h1{font-size:clamp(2.72rem,11.8vw,3.35rem);line-height:1.02;letter-spacing:-.045em}.hero h1 span{margin-top:4px}.hero-lead{margin:25px 0 28px;font-size:1rem;line-height:1.7}.hero-art{min-height:330px}.hero-carousel-ui{left:16px;right:16px;bottom:22px;justify-content:space-between}.hero-carousel-arrows button{width:42px;height:42px}.hero-art img{width:94%;max-width:430px}.hero-art::before{width:min(86vw,400px)}.hero-art::after{width:min(70vw,330px)}
       .hero-actions{gap:10px}.button{min-height:56px;padding-inline:18px;font-size:.78rem;gap:15px}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
       .intro,.pillars,.mission,.stand,.experience,.give,.team{padding-block:78px}.intro h2,.section-head h2,.mission-copy h2,.stand-copy h2,.experience h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08;letter-spacing:-.035em}.intro-copy{grid-template-columns:1fr;gap:24px;margin-top:32px}.intro-copy .lead{font-size:1.18rem}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:270px;padding:28px}.pillar h3{margin-top:42px;font-size:2rem}.mission-art::before{inset:14px -8px -14px 8px}.mission-quote{margin-block:28px;padding:20px 0 20px 20px;font-size:1.08rem}.stand-label{display:block;font-size:.65rem;line-height:1.7}.step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:28px}.step h3{font-size:1.65rem}
@@ -256,13 +260,13 @@
   <main id="main">
     <section class="hero" id="home">
       <div class="hero-slides" data-hero-carousel aria-label="Temple of Faith Houston photo highlights">
-        <img class="hero-slide active" src="hero/hero-01.webp" alt="Temple of Faith Houston leadership and ministry team" fetchpriority="high">
-        <img class="hero-slide" src="hero/hero-02.webp" alt="Temple of Faith Houston fellowship gathering">
-        <img class="hero-slide" src="hero/hero-03.webp" alt="Temple of Faith Houston ministry group">
-        <img class="hero-slide" src="hero/hero-04.webp" alt="Temple of Faith Houston church family">
-        <img class="hero-slide" src="hero/hero-05.webp" alt="Temple of Faith Houston prison outreach visit">
-        <img class="hero-slide" src="hero/hero-06.webp" alt="Temple of Faith Houston ministry leaders">
-        <img class="hero-slide" src="hero/hero-07.webp" alt="Temple of Faith Houston Sow a Seed ministry campaign">
+        <div class="hero-slide active" style="--slide-image:url('hero/hero-01.webp')"><img src="hero/hero-01.webp" alt="Temple of Faith Houston leadership and ministry team" fetchpriority="high" loading="eager"></div>
+        <div class="hero-slide is-portrait" style="--slide-image:url('hero/hero-02.webp')"><img src="hero/hero-02.webp" alt="Temple of Faith Houston fellowship gathering" loading="lazy"></div>
+        <div class="hero-slide is-portrait" style="--slide-image:url('hero/hero-03.webp')"><img src="hero/hero-03.webp" alt="Temple of Faith Houston ministry group" loading="lazy"></div>
+        <div class="hero-slide" style="--slide-image:url('hero/hero-04.webp')"><img src="hero/hero-04.webp" alt="Temple of Faith Houston church family" loading="lazy"></div>
+        <div class="hero-slide is-portrait" style="--slide-image:url('hero/hero-05.webp')"><img src="hero/hero-05.webp" alt="Temple of Faith Houston prison outreach visit" loading="lazy"></div>
+        <div class="hero-slide is-portrait" style="--slide-image:url('hero/hero-06.webp')"><img src="hero/hero-06.webp" alt="Temple of Faith Houston ministry leaders" loading="lazy"></div>
+        <div class="hero-slide is-portrait" style="--slide-image:url('hero/hero-07.webp')"><img src="hero/hero-07.webp" alt="Temple of Faith Houston Sow a Seed ministry campaign" loading="lazy"></div>
       </div>
       <div class="hero-carousel-ui"><div class="hero-carousel-arrows"><button type="button" data-hero-prev aria-label="Previous background photo">‹</button><button type="button" data-hero-next aria-label="Next background photo">›</button></div><div class="hero-carousel-dots" aria-label="Choose background photo"><button type="button" class="active" data-hero-slide="0" aria-label="Photo 1"></button><button type="button" data-hero-slide="1" aria-label="Photo 2"></button><button type="button" data-hero-slide="2" aria-label="Photo 3"></button><button type="button" data-hero-slide="3" aria-label="Photo 4"></button><button type="button" data-hero-slide="4" aria-label="Photo 5"></button><button type="button" data-hero-slide="5" aria-label="Photo 6"></button><button type="button" data-hero-slide="6" aria-label="Photo 7"></button></div></div>
       <div class="wrap hero-inner">
