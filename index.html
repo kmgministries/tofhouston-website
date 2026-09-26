@@ -110,6 +110,14 @@
     .team-photo{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--paper)}
     .team-photo::after{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(transparent,#16090b66)}
     .team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .team-carousel img{position:absolute;inset:0;opacity:0;transform:scale(1.02);transition:opacity .45s ease,transform .7s ease}
+    .team-carousel img.active{opacity:1;transform:scale(1)}
+    .carousel-controls{position:absolute;z-index:3;left:14px;right:14px;top:50%;display:flex;justify-content:space-between;translate:0 -50%;pointer-events:none}
+    .carousel-controls button{width:42px;height:42px;display:grid;place-items:center;border:1px solid #ffffff88;border-radius:50%;background:#0b0607bb;color:#fff;font-size:1.15rem;cursor:pointer;pointer-events:auto;backdrop-filter:blur(8px)}
+    .carousel-controls button:hover{background:var(--ruby)}
+    .carousel-dots{position:absolute;z-index:3;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px}
+    .carousel-dots button{width:9px;height:9px;padding:0;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer}
+    .carousel-dots button.active{background:var(--gold-light);border-color:var(--gold-light)}
     .team-placeholder{width:100%;height:100%;display:grid;place-items:center;background:radial-gradient(circle at 70% 20%,#8e172255,transparent 36%),linear-gradient(145deg,var(--night-soft),var(--wine-deep));color:var(--gold-light);font:700 clamp(3.5rem,7vw,6rem)/1 "Libre Baskerville",Georgia,serif;letter-spacing:.04em}
     .team-card:hover .team-photo img{transform:scale(1.035)}
     .team-card:nth-child(1) .team-photo img{object-position:center 25%}
@@ -262,7 +270,7 @@
 
     <section class="team" id="team">
       <div class="wrap"><div class="team-head reveal"><div><p class="eyebrow">Meet our leadership</p><h2>Serving with faith.<br><em>Leading with purpose.</em></h2></div><p>Our leadership team is committed to preaching the Word, caring for people, and helping every person grow in faith and purpose.</p></div><div class="team-grid">
-        <article class="team-card reveal"><div class="team-photo"><img src="team/jeffery-achane.webp" alt="Pastor Jeffery Achane" loading="lazy"></div><div class="team-card-copy"><h3>Jeffery Achane</h3><p class="team-role">Senior Pastor</p></div></article>
+        <article class="team-card reveal"><div class="team-photo team-carousel" data-carousel><img class="active" src="team/jeffery-achane.webp" alt="Pastor Jeffery Achane portrait 1" loading="lazy"><img src="team/jeffery-achane-2.webp" alt="Pastor Jeffery Achane portrait 2" loading="lazy"><img src="team/jeffery-achane-3.webp" alt="Pastor Jeffery Achane portrait 3" loading="lazy"><div class="carousel-controls"><button type="button" data-prev aria-label="Previous photo">‹</button><button type="button" data-next aria-label="Next photo">›</button></div><div class="carousel-dots" aria-label="Choose Jeffery Achane photo"><button type="button" class="active" data-slide="0" aria-label="Photo 1"></button><button type="button" data-slide="1" aria-label="Photo 2"></button><button type="button" data-slide="2" aria-label="Photo 3"></button></div></div><div class="team-card-copy"><h3>Jeffery Achane</h3><p class="team-role">Senior Pastor</p></div></article>
         <article class="team-card reveal"><div class="team-photo"><div class="team-placeholder" role="img" aria-label="Kenneth Smith photo coming soon">KS</div></div><div class="team-card-copy"><h3>Kenneth Smith</h3><p class="team-role">Associate Pastor</p></div></article>
         <article class="team-card reveal"><div class="team-photo"><img src="team/warren-inman.webp" alt="Warren Inman" loading="lazy"></div><div class="team-card-copy"><h3>Warren Inman</h3><p class="team-role">Leadership Team</p></div></article>
         <article class="team-card reveal"><div class="team-photo"><img src="team/kevin-gladney.webp" alt="Kevin Gladney" loading="lazy"></div><div class="team-card-copy"><h3>Kevin Gladney</h3><p class="team-role">Communications Director</p></div></article>
@@ -297,6 +305,7 @@
     menu.addEventListener('click',()=>{const open=panel.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close ×':'Menu ☰'});
     panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{panel.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰'}));
     document.getElementById('year').textContent=new Date().getFullYear();
+    document.querySelectorAll('[data-carousel]').forEach(carousel=>{const slides=[...carousel.querySelectorAll('img')],dots=[...carousel.querySelectorAll('[data-slide]')];let current=0;const show=index=>{current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>slide.classList.toggle('active',i===current));dots.forEach((dot,i)=>dot.classList.toggle('active',i===current))};carousel.querySelector('[data-prev]').addEventListener('click',()=>show(current-1));carousel.querySelector('[data-next]').addEventListener('click',()=>show(current+1));dots.forEach(dot=>dot.addEventListener('click',()=>show(Number(dot.dataset.slide))))});
     const navLinks=[...document.querySelectorAll('.desktop-nav a[href^="#"]')],targets=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
     const active=id=>navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));
     const navObserver=new IntersectionObserver(entries=>{const shown=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(shown)active(shown.target.id)},{rootMargin:'-25% 0px -62%',threshold:[0,.2,.5]});
