@@ -191,7 +191,6 @@
     .give-card{padding:48px;background:var(--wine-deep);color:#fff;box-shadow:0 28px 70px #32120d26}
     .give-card h3{margin:0 0 14px;font-size:2rem;line-height:1.2}
     .give-card p{margin:0;color:#eadbd5;font-size:1rem;line-height:1.7}
-    .give-card>.tithely-give-button{width:100%;margin-top:28px}
     .give-status{display:block;margin-bottom:20px;color:var(--gold-light);font-size:.8rem;font-weight:800;letter-spacing:.14em}
     .give-frame{display:block;width:100%;height:800px;border:0;background:#fff}
     .give-note{display:block;margin-top:16px;color:#cebfb7;font-size:.78rem;line-height:1.5;text-align:center}
@@ -321,7 +320,7 @@
     </section>
 
     <section class="give" id="give">
-      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><span class="give-status">SECURE ONLINE GIVING</span><h3>Give Online</h3><p>Use the secure Tithe.ly button below to open the giving form without leaving the Temple of Faith Houston website.</p><button class="tithely-give-button" data-form="3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" style="background-color: #00DB72; font-family: inherit; font-weight: bold; font-size: 19px; padding: 15px 70px; border-radius: 4px; cursor: pointer; background-image: none; color: white; text-shadow: none; display: inline-block; float: none; border: none;">Give</button><small class="give-note">Secure giving is provided by Tithe.ly.</small><div class="alternate-giving"><span>OTHER WAYS TO GIVE</span><p>Cash App <strong>$tofstand</strong></p><p>Zelle <strong>(832) 928-1447</strong></p></div></div></div>
+      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><span class="give-status">SECURE ONLINE GIVING</span><h3>Give Online</h3><p>Complete the secure Tithe.ly giving form below without leaving the Temple of Faith Houston website.</p><iframe class="give-frame" src="https://give.tithe.ly/?formId=3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" title="Temple of Faith Houston secure online giving form" width="100%" height="800" loading="lazy" allow="payment *"></iframe><small class="give-note">Secure giving is provided by Tithe.ly.</small><div class="alternate-giving"><span>OTHER WAYS TO GIVE</span><p>Cash App <strong>$tofstand</strong></p><p>Zelle <strong>(832) 928-1447</strong></p></div></div></div>
     </section>
   </main>
 
@@ -347,6 +346,5 @@
     const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revealObserver.unobserve(e.target)}}),{threshold:.1});
     document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
   </script>
-  <script src="https://static.tithely.com/give/give.js" defer></script>
 </body>
 </html>
