@@ -194,7 +194,7 @@
     .give-status{display:block;margin-bottom:20px;color:var(--gold-light);font-size:.8rem;font-weight:800;letter-spacing:.14em}
     .give-frame{display:block;width:100%;height:800px;border:0;background:#fff}
     .give-note{display:block;margin-top:16px;color:#cebfb7;font-size:.78rem;line-height:1.5;text-align:center}
-    .alternate-giving{margin-top:28px;padding-top:24px;border-top:1px solid #ffffff26;text-align:center}.alternate-giving span{display:block;color:var(--gold-light);font-size:.72rem;font-weight:800;letter-spacing:.14em}.alternate-giving p{margin:12px 0 0;color:#fff;font-size:1rem}.alternate-giving strong{display:inline-block;margin-left:8px;color:var(--gold-light);font-size:1.18rem;letter-spacing:.02em}
+    .alternate-giving{margin-top:28px;padding-top:24px;border-top:1px solid #ffffff26;text-align:center}.alternate-giving>span{display:block;color:var(--gold-light);font-size:.72rem;font-weight:800;letter-spacing:.14em}.giving-qr-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}.giving-qr-card{display:flex;min-width:0;flex-direction:column;align-items:center;padding:18px 10px;background:#ffffff0b;border:1px solid #ffffff1f}.giving-qr-card h4{margin:0 0 12px;color:#fff;font-size:1rem}.giving-qr-code{display:flex;width:172px;max-width:100%;min-height:172px;align-items:center;justify-content:center;padding:6px;background:#fff}.giving-qr-code canvas,.giving-qr-code img{display:block;max-width:100%;height:auto!important}.giving-qr-card strong{display:block;margin-top:14px;color:var(--gold-light);font-size:1rem;overflow-wrap:anywhere}.giving-qr-card small{display:block;margin-top:6px;color:#cebfb7;font-size:.68rem;line-height:1.45}
 
     .footer{background:#090606;color:#eee1d4}
     .footer-callout{border-bottom:1px solid #ffffff1e}
@@ -238,7 +238,7 @@
       .hero-actions{gap:10px}.button{min-height:56px;padding-inline:18px;font-size:.78rem;gap:15px}
       .commitment-inner{grid-template-columns:1fr 1fr}.commitment-inner span{min-height:68px;border-bottom:1px solid var(--line)}
       .intro,.pillars,.mission,.stand,.experience,.give,.team{padding-block:78px}.intro h2,.section-head h2,.mission-copy h2,.stand-copy h2,.experience h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08;letter-spacing:-.035em}.intro-copy{grid-template-columns:1fr;gap:24px;margin-top:32px}.intro-copy .lead{font-size:1.18rem}.pillar-grid{grid-template-columns:1fr}.pillar{min-height:270px;padding:28px}.pillar h3{margin-top:42px;font-size:2rem}.mission-art::before{inset:14px -8px -14px 8px}.mission-quote{margin-block:28px;padding:20px 0 20px 20px;font-size:1.08rem}.stand-label{display:block;font-size:.65rem;line-height:1.7}.step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding-block:28px}.step h3{font-size:1.65rem}
-      .prayer-inner{min-height:auto;padding-block:76px}.prayer h2{font-size:clamp(2.65rem,11vw,3.45rem);line-height:1.05}.prayer-actions,.button{width:100%}.give-card{padding:32px 24px}.give-copy h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08}
+      .prayer-inner{min-height:auto;padding-block:76px}.prayer h2{font-size:clamp(2.65rem,11vw,3.45rem);line-height:1.05}.prayer-actions,.button{width:100%}.give-card{padding:32px 24px}.give-copy h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08}.giving-qr-grid{grid-template-columns:1fr}
       .team-grid{gap:20px}.team-card{flex-basis:min(100%,300px)}.team-head{gap:26px;margin-bottom:38px}.team-head h2{font-size:clamp(2.35rem,10vw,3.15rem);line-height:1.08}.footer-callout-inner{min-height:auto;padding-block:62px;gap:34px}.footer-callout h2{font-size:clamp(2.35rem,10vw,3rem);line-height:1.08}.footer-main{grid-template-columns:1fr;padding-block:48px}.footer-brand{grid-column:auto;flex-direction:column}.footer-brand img{width:110px;height:110px}.footer-main>.footer-col:last-child{grid-column:auto}.footer-bottom-inner{font-size:.78rem;gap:12px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button{transition:none}}
@@ -320,7 +320,7 @@
     </section>
 
     <section class="give" id="give">
-      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><span class="give-status">SECURE ONLINE GIVING</span><h3>Give Online</h3><p>Complete the secure Tithe.ly giving form below without leaving the Temple of Faith Houston website.</p><iframe class="give-frame" src="https://give.tithe.ly/?formId=3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" title="Temple of Faith Houston secure online giving form" width="100%" height="800" loading="lazy" allow="payment *"></iframe><small class="give-note">Secure giving is provided by Tithe.ly.</small><div class="alternate-giving"><span>OTHER WAYS TO GIVE</span><p>Cash App <strong>$tofstand</strong></p><p>Zelle <strong>(832) 928-1447</strong></p></div></div></div>
+      <div class="wrap give-inner"><div class="give-copy reveal"><p class="eyebrow">Support the mission</p><h2>Give with faith.<br><em>Make an impact.</em></h2><p>Your generosity helps Temple of Faith Houston share the Word of God, serve people and families, and strengthen ministry in our community.</p></div><div class="give-card reveal"><span class="give-status">SECURE ONLINE GIVING</span><h3>Give Online</h3><p>Complete the secure Tithe.ly giving form below without leaving the Temple of Faith Houston website.</p><iframe class="give-frame" src="https://give.tithe.ly/?formId=3872a8bf-752b-4fe2-aa0f-e3c479bdbf4d" title="Temple of Faith Houston secure online giving form" width="100%" height="800" loading="lazy" allow="payment *"></iframe><small class="give-note">Secure giving is provided by Tithe.ly.</small><div class="alternate-giving"><span>OTHER WAYS TO GIVE</span><div class="giving-qr-grid"><div class="giving-qr-card"><h4>Cash App</h4><div class="giving-qr-code" id="cashapp-qr" role="img" aria-label="Cash App QR code for $tofstand"></div><strong>$tofstand</strong><small>Scan to open Cash App</small></div><div class="giving-qr-card"><h4>Zelle</h4><div class="giving-qr-code" id="zelle-qr" role="img" aria-label="Zelle giving QR code for 832-928-1447"></div><strong>(832) 928-1447</strong><small>Scan and use this number in Zelle</small></div></div></div></div></div>
     </section>
   </main>
 
@@ -345,6 +345,10 @@
     targets.forEach(section=>navObserver.observe(section));
     const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revealObserver.unobserve(e.target)}}),{threshold:.1});
     document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script>
+    (()=>{const make=(id,text)=>{const el=document.getElementById(id);if(el&&typeof QRCode!=='undefined')new QRCode(el,{text,width:160,height:160,colorDark:'#120708',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H})};make('cashapp-qr','https://cash.app/$tofstand');make('zelle-qr','Zelle payment to Temple of Faith Houston: 8329281447')})();
   </script>
 </body>
 </html>
