@@ -34,3 +34,13 @@ Detailed metrics and charts are based on up to 1,000 records per module; residen
 This is an initial implementation, not the entire 30-section specification completed and production-certified. Recurrence/reminder fields are descriptive only. Automatic notifications, email/SMS dispatch, automatic discharge/follow-up scheduling, comprehensive assessment templates, enrollment calendar expansion, global cross-module search, configurable admin taxonomies, native XLSX exports, dedicated integration adapters, robust public-form abuse protection, content-scanning uploads, granular column-level staff privacy, managed backup/restore, and production security review remain. Typed document signatures are stored with user/time; no external legal e-signature service is implemented. Financial entries record offline payments; no payment processing occurs.
 
 No resident or financial records are hardcoded into the public frontend. The administrator can use Add DEMO data to insert clearly marked fictional examples into the protected database. Documents and user accounts are not faked by this action. Additional samples can be marked DEMO through the record form.
+# Workspace redesign
+
+The portal includes a daily work dashboard, permission-filtered workspace search,
+and resident workspaces for overview, goals and tasks, case management, programs,
+documents, financial ledger, transition and aftercare, and chronological history.
+Adding a record from a resident workspace preselects that resident.
+Search is limited to the first 1,000 accessible records in each supported module.
+The sign-in screen is separate from administrator database activation instructions.
+Local smoke checks cover workspace rendering and role-filtered navigation; browser
+geometry and live database authorization tests remain outstanding.
